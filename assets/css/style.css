@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: MontserratAlternatesBold;
+    src: url('../fonts/MontserratAlternates-Bold.ttf');
+}
+
+@font-face {
+    font-family: MontserratRegular;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: MontserratBold;
+    font-weight: bolder;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+:root {
+    --blue: #0000ff;
+    --pink: #ff00ff;
+    --black: #151515;
+}
+
+/* Como não era necessário ser responsivo, fiz em 320px */
+
+body{
+    width: 320px;
+    margin: auto;
+}
+
+.title{
+    font-size: 72px;
+    font-family: MontserratAlternatesBold;
+}
+
+.form-control{
+    font-size: 20px;
+    box-shadow: none !important;
+}
+
+.form-control::placeholder{
+    color: #e6e6e6;
+}
+
+.input-group-text{
+    font-size: 20px;
+}
+
+.lbg-black{
+    background-color: #151515;
+}
+
+.lbtn-primary{
+    font-size: 20px;
+    font-family: MontserratBold;
+    font-weight: 800;
+    background: linear-gradient(60deg, var(--pink) 35%, var(--blue) 75%);
+    background-size: 200% 200%;
+    animation: btnGrad 5s ease infinite;
+    transition: filter .6s, transform .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.lbtn-primary::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: var(--black);
+    transition: transform .6s, border-radius .3s;
+    border-radius: 20px;
+}
+
+.lbtn-primary:disabled::after{
+    transform: translateX(102%);
+    border-radius: 0;
+}
+
+.lbtn-primary:disabled{
+    opacity: 1;
+}
+
+.front{
+    z-index: 1;
+    position: relative;
+}
+
+.lbtn-primary:hover{
+    transform: scale(1.07);
+}
+
+.lbtn-rounded{
+    border-radius: 20px;
+}
+
+a{
+    color: #f1f1f1;
+}
+a:hover{
+    color: #cfcfcf;
+}
+
+@keyframes btnGrad {
+    0%{
+        background-position: 70% 0;
+    }
+    50%{
+        background-position: 0% 0;
+    }
+    100%{
+        background-position: 70% 0;
+    }
+}
+
+@keyframes disabledOpacity {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .9;
+    }
+}

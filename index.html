@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body class="lbg-black outline-none">
+    <main class="container-fluid d-flex flex-column align-items-center justify-content-between">
+        <h1 class="text-white title my-5">LBank</h1>
+
+        <div class="input-group mb-4 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text border border-0 bg-transparent text-white h-100">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control bg-transparent flex-fill border border-0 border-bottom text-white" placeholder="Usuário">
+        </div>
+
+        <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text border border-0 bg-transparent text-white h-100">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+            </div>
+            <input type="password" class="form-control bg-transparent flex-fill border border-0 border-bottom text-white" placeholder="Senha">
+        </div>
+
+        <div class="prajuntarosdoisbagui w-100 d-flex flex-column align-items-center">
+            <button id="btnLogin" class="btn lbtn-primary flex-fill mt-5 border-0 text-white lbtn-rounded mb-2 w-100">
+                <span class="front">Logar</span>
+            </button>
+            <a href="#">Esqueceu o usuário ou a senha?</a>
+        </div>
+    </main>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        const btnLogin = document.getElementById("btnLogin")
+
+        btnLogin.addEventListener('click', () => {
+            btnLogin.disabled = true
+        })
+    </script>
+</body>
+</html>
